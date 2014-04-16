@@ -95,7 +95,6 @@ io.sockets.on("connection", function (socket){
 	});
 });
 app.get('/logout', function(req, res){
-	console.log('>>>logout');
 	res.cookie('user', req.body.name, { maxAge: 0 });
 	res.redirect('/');
 });
