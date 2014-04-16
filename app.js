@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -97,8 +96,6 @@ io.sockets.on("connection", function (socket){
 });
 app.get('/logout', function(req, res){
 	console.log('>>>logout');
-	//req.session.user = null;
-	//res.cookie("user", req.body.name, {maxAge: 1000*60*60*24*30});
 	res.cookie('user', req.body.name, { maxAge: 0 });
 	res.redirect('/');
 });
